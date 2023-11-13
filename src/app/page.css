@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+    width: auto;
+    border: 2px solid white;
+}
+
+.proton {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    /* background-color: deepskyblue; */
+    position: relative;
+
+}
+
+.electron {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: gray;
+    position: relative;
+    left: -100px; 
+    top: -100px;
+    animation: rotation 3s infinite linear;
+}
+
+.electron::before {
+    content: '';
+    position: absolute;
+
+
+}
+
+@keyframes rotation{
+    0%{
+        transform: rotate(-360deg)
+    }
+}

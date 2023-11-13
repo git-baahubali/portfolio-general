@@ -1,0 +1,57 @@
+.tech-stack {
+    position: relative;
+    width: 100%;
+    /* Takes the full width of its parent container */
+    height: 100%;
+    /* Takes the full height of its parent container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Prevents any part of the revolving images from overflowing outside of the parent container */
+}
+
+.center-image img {
+    border-radius: 50%;
+    width: 150px;
+    /* Central image size */
+    height: 150px;
+    object-fit: contain;
+
+    position: absolute;
+    top: calc(50%);
+    left:calc(50%);
+    transform: translateX(-75px) translateY(-75px);
+    z-index: 1;
+    /* Above revolving images */
+}
+
+.orbit {
+    position: absolute;
+    animation:   10s linear infinite;
+}
+
+.orbit img {
+    border-radius: 50%;
+    /* Circular crop */
+    width: 100%;
+    /* Full width of the parent orbit container */
+    height: 100%;
+    /* Full height of the parent orbit container */
+    object-fit: contain;
+    /* scale: 0.9; */
+}
+
+.tech-stack .orbit img{
+
+}
+
+@keyframes revolve {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
