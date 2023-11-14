@@ -52,7 +52,7 @@ function TechStackV2() {
                     onMouseLeave={toggleFlipperClass}
                     style={{ transform: showDownloadBtn ? 'rotateY(180deg)' : '' }}>
                     <div className={techStackStyles.front}>
-                        <img src="Images/Photo.jpg" alt="" className={techStackStyles.frontImg}
+                        <img src="Images/photo.jpg" alt="" className={techStackStyles.frontImg}
                         />
                     </div>
                     <div className={techStackStyles.back}>
