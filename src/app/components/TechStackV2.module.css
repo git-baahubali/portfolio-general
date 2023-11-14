@@ -6,7 +6,7 @@
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transition: all  0.5s ease-in;
-    z-index: 1300;
+    z-index: 40;
     display: flex;
     /* border: 2px solid  olivedrab; */
 

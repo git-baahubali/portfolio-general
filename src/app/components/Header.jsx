@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React, { useEffect, useRef } from 'react'
 import Light from './Light';
 import Dark from './Dark';
+// import '../globals.css'
 
 function Header({ darkMode, setDarkMode }) {
   const downloadRef = useRef(null);
@@ -51,14 +52,14 @@ function Header({ darkMode, setDarkMode }) {
   }, [])
 
   return (
-    <div className=' fixed top-0 w-full flex justify-between items-center border-gray-300 rounded-full border-[1px] text-black py-8 px-4
+    <div className=' fixed top-0 w-full z-50 flex justify-between items-center border-gray-300 rounded-full border-[1px] text-black py-8 px-4
     backdrop-blur-2xl'>
       <p className='text-3xl font-bold'>B.</p>
       <ul className='flex justify-between items-center gap-8'>
-        <Link href={'/'}><li>Home</li> </Link>
-        <Link href={'/Projects'}><li>Projects</li> </Link>
-        {/* <Link href={'/Resume'}><li>Contac</li> </Link> */}
-        <Link href={'/About'}><li>About</li> </Link>
+        <Link href={'/'}><li className='hover:underline underline-offset-8'>Home</li> </Link>
+        <Link href={'/Projects'}><li className='hover:underline underline-offset-8'>Projects</li> </Link>
+        <Link href={'/Resume'}><li className='hover:underline underline-offset-8'>Contact</li> </Link>
+        {/* <Link href={'/About'}><li>About</li> </Link> */}
       </ul>
 
       <div className="">
