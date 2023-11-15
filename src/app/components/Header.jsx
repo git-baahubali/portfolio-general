@@ -58,7 +58,7 @@ function Header({ darkMode, setDarkMode }) {
       <ul className='flex justify-between items-center gap-8'>
         <Link href={'/'}><li className='hover:underline underline-offset-8'>Home</li> </Link>
         <Link href={'/Projects'}><li className='hover:underline underline-offset-8'>Projects</li> </Link>
-        <Link href={'/Resume'}><li className='hover:underline underline-offset-8'>Contact</li> </Link>
+        <Link href={'/contact'}><li className='hover:underline underline-offset-8'>Contact</li> </Link>
         {/* <Link href={'/About'}><li>About</li> </Link> */}
       </ul>
 

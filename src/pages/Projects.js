@@ -1,6 +1,8 @@
 import Header from '../app/components/Header'
 import React,{useEffect,useState} from 'react'
 
+
+
 function Projects() {
 const [ScrollVisiblity, setScrollVisiblity] = useState(false)
 
@@ -64,7 +66,6 @@ useEffect(()=>{
         {/* 100X project  */}
         <main className=''>
           <div class="images">
-            
           </div>
         </main>
 
