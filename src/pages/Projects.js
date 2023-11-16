@@ -63,8 +63,10 @@ function Projects() {
                 <p>HTML</p>
                 <p>Tailwind Css</p>
               </h2>
+
               <a className="button" href="https://paytm-replica.vercel.app/" target='_blank'>Check Out in new tab</a>
               <a className="button" href='https://github.com/git-baahubali/Paytm-Replica'>Project repo</a>
+
             </article>
           </main>
         </div>
@@ -100,8 +102,10 @@ function Projects() {
                   <li>PostgreSQL</li>
                 </ul>
               </div>
-              <a href="https://paytm-replica.vercel.app/" target='_blank' className='button'>Check Out in new tab</a>
+
+              <a href="https://100xmicroblog.vercel.app/" target='_blank' className='button'>Check Out in new tab</a>
               <a href='https://github.com/git-baahubali/Paytm-Replica' className='button'>Project repo</a>
+
             </article>
           </main>
         </div>
