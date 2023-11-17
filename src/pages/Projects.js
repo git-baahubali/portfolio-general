@@ -6,6 +6,11 @@ import AnimationWraper from '@/app/components/AnimationWraper'
 function Projects() {
   const [ScrollVisiblity, setScrollVisiblity] = useState(false)
 
+  const projectImages = [<img src="Images/100x/Create0.png" alt="" className="object-contain h-full" />,
+  <img src="Images/100x/Home.png" alt="" className="object-contain h-full" />,
+  <img src="Images/100x/Profile_edit.png" alt="" className="object-contain h-full" />,
+  <img src="Images/100x/Profile.png" alt="" className="object-contain h-full" />]
+
   useEffect(() => {
 
     const timer = setTimeout(() => {
@@ -18,6 +23,8 @@ function Projects() {
 
     //
   }, [])
+
+
   return (
     <div>
       <Header />
@@ -77,10 +84,7 @@ function Projects() {
 
           <main className='py-8 px-4 sm:flex sm:justify-center '>
             <div className="images-section shadow-2xl flex justify-between items-center w-[900px] h-[450px]  border-[1px] border-gray-300  rounded-lg p-2 overflow-hidden">
-              <img src="Images/100x/Create0.png" alt="" className="object-contain h-full" />
-              <img src="Images/100x/Home.png" alt="" className="object-contain h-full" />
-              <img src="Images/100x/Profile_edit.png" alt="" className="object-contain h-full" />
-              <img src="Images/100x/Profile.png" alt="" className="object-contain h-full" />
+             { projectImages.map(img => <AnimationWraper customStyles={'object-contain h-full'}> {img} </AnimationWraper>)}
             </div>
             <article className="About-section ml-10 border-0 border-sky-900 flex flex-col justify-start items-start gap-10">
               <h1>About
@@ -98,7 +102,6 @@ function Projects() {
                   <li>Css</li>
                   <li>Tailwind </li>
                   <li>Express js</li>
-
                   <li>PostgreSQL</li>
                 </ul>
               </div>

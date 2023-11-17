@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import TechStack from './AnotherStack'
 import TechStackV2 from './TechStackV2'
 import Test from './Test'
+import AnimationWraper from './AnimationWraper'
 
 function Name() {
     return (
@@ -13,7 +15,10 @@ function Name() {
                     borderBottomLeftRadius: '0.75rem'
                 }}>
                 <p className='font-normal'>👋I'M </p>
-                <h1 className='text-8xl font-normal'>Balaji Dasari</h1>
+                <AnimationWraper>
+                    <h1 className='text-8xl font-normal'>Balaji Dasari</h1>
+                </AnimationWraper>
+                <AnimationWraper>
                 <section className='text-gray-600'>
                     Full stack developer committed to
                     delivering high-quality solutions.My
@@ -21,17 +26,18 @@ function Name() {
                     commitment to continuous learning and
                     skill enhancement.
                 </section>
+                </AnimationWraper>
                 {/* <button className='border-[1px] border-gray-300 rounded-lg px-2 py-1'>CheckOut my blog</button> */}
 
                 {/* Image */}
             </div>
             <div className="border-r-gray-300 sm:w-1/2  my-5 border-[1px] "
-            style={{
-                borderTopRightRadius: '0.75rem',
-                borderBottomRightRadius: '0.75rem',
-                // borderLeft:'none',
-            }}>
-                    <TechStackV2 />
+                style={{
+                    borderTopRightRadius: '0.75rem',
+                    borderBottomRightRadius: '0.75rem',
+                    // borderLeft:'none',
+                }}>
+                <TechStackV2 />
             </div>
         </div>
     )

@@ -1,45 +1,36 @@
-import React, { useEffect, useRef } from 'react'
+'use client'
+import React, { useEffect, useState,useCallback } from 'react'
+import { useInView } from 'react-intersection-observer';
 import '../../styles/AnimationWraper.css'
 
-function AnimationWraper({ children }) {
-    const listRef = useRef(null)
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        {entry.target.classList.add('animate-on-scroll');
-                        // entry.target.style.transform = 'translateX(0)';
-                    }
-                    } else {
-                        {entry.target.classList.remove('animate-on-scroll');
-                        // entry.target.style.transform = 'translateX(-100)';
-                    }
-                    }
-                });
-            },
-            {
-                root: null, // viewport
-                threshold: 0.1, // adjust as needed
-            }
-        );
 
-        const { current } = listRef;
-        if (current) {
-            observer.observe(current);
+function AnimationWraper({ children, customStyles }) {
+    console.log("render");
+    const handleIntersection = (inView, entry) => {
+        if (inView) {
+            entry.target.classList.add('animate-on-scroll');
+        } else {
+            entry.target.classList.remove('animate-on-scroll');
         }
+    }
 
-        return () => {
-            if (current) {
-                observer.unobserve(current);
-            }
-        };
+    const { ref, inView, entry } = useInView({
+        threshold: 0.1,
+        triggerOnce: false,
+    });
 
-    }, [])
+    React.useEffect(() => {
+        if (entry) {
+            handleIntersection(inView, entry);
+        }
+    }, [ handleIntersection]);
+
+    console.log([inView]);
 
     return (
-        <div ref={listRef} className="animation-wrapper">{children}</div>
+        <div ref={ref} className={`animation-wrapper ${customStyles} ${inView ? 'animate-on-scroll' : ''}`}>{children}</div>
     )
 }
 
 export default AnimationWraper
+

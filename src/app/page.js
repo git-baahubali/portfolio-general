@@ -13,6 +13,7 @@ import AnimationWraper from './components/AnimationWraper'
 const robotoMono = Roboto_Mono({ subsets: ['latin'] })
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
+
   var skills = ['HTML', 'CSS', 'Javascript', 'Node js', 'React js', 'Tailwind', 'Express', 'PostgreSQL']
   const skillsContainer = skills.map((x, index) => <AnimationWraper key={index}>
     <li className={`px-4 py-2 m-2 transition-all ease-in border-2 border-white hover:border-sky-800 hover:bg-gray-800 hover:text-gray-300 hover:rounded-full`}>{x}</li>
@@ -20,7 +21,7 @@ export default function Home() {
   )
 
   var skillsHoverstyles = 'bg-gray-800 text-gray-300 rounded-full'.split(' ').map(word => `hover:${word}`).join(' ');
-  console.log(skillsHoverstyles);
+  // console.log(skillsHoverstyles);
 
   return (
     <main style={robotoMono.style} className={'w-full h-[100vh] ' + `${darkMode ? 'bg-black text-white' : 'text-black bg-white'}`}>
@@ -34,6 +35,9 @@ export default function Home() {
       px-4 py-24  border-[1px] rounded-lg
         bg-white ">
         <h6 className='font-normal text-xl'>My</h6>
+        <p className='motion-safe:animate-bounce hidden'>helloe
+      <p>world</p>
+      </p>
         <h3 class="font-normal text-9xl">Skills</h3>
         <ul class="flex justify-center sm:justify-start items-center flex-wrap
         mt-8 ">
@@ -53,6 +57,8 @@ export default function Home() {
 
 
       </div>
+
+      
     </main>
   )
 }
