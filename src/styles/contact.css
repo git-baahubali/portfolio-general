@@ -1,0 +1,13 @@
+.contact-card{
+    padding: 1rem 2rem;
+    border-radius: 99999px;
+    width: 24rem;
+    margin: 1rem;
+    background: black;
+    color: white;
+}
+
+.contact-card:hover{
+    background: rgb(169, 169, 169);
+    color: black;
+}

@@ -38,7 +38,7 @@ function TechStackV2() {
         setTimeout(() => {
            toggleFlipperClass(); 
         }, 3000);
-      }, 2000);
+      }, 3000);
 
       return () => clearTimeout(timer)
     }, [])

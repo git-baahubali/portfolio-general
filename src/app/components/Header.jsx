@@ -54,7 +54,7 @@ function Header({ darkMode, setDarkMode }) {
   return (
     <div className=' fixed top-0 w-full z-50 flex justify-between items-center border-gray-300 rounded-full border-[1px] text-black py-8 px-4
     backdrop-blur-2xl'>
-      <p className='text-3xl font-bold'>B.</p>
+      <p className='text-3xl font-bold'>Balaji D</p>
       <ul className='flex justify-between items-center gap-8'>
         <Link href={'/'}><li className='hover:underline underline-offset-8'>Home</li> </Link>
         <Link href={'/Projects'}><li className='hover:underline underline-offset-8'>Projects</li> </Link>

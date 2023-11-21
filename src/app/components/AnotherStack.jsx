@@ -1,4 +1,4 @@
-import './TechStack.css'
+// import './TechStack.css'
 
 function AnotherStack() {
     const revolvingImages = [
