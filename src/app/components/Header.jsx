@@ -67,7 +67,7 @@ function Header({ darkMode, setDarkMode }) {
           onClick={() => setDarkMode(prev => !prev)}>
           {darkMode ? <Light /> : <Dark />}
         </button> */}
-        <a ref={downloadRef} className='Resume-download-btn rounded-full py-2 px-4  bg-black text-white  hover:scale-110  transition duration-300 ease-in-out' href={'Resumes/Latest.pdf'} download={'Balaji Dasari Resume.pdf'}
+        <a ref={downloadRef} className='Resume-download-btn rounded-full py-2 px-4  bg-black text-white  hover:scale-110  transition duration-300 ease-in-out' href={'Resumes/1.pdf'} download={'Balaji Dasari Resume.pdf'}
         > Download Resume</a>
       </div>
     </div>
